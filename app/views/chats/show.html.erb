@@ -1,0 +1,13 @@
+<!-- app/views/chats/show.html.erb -->
+<h2>Chat with <%= @classroom.name %></h2>
+
+<%= form_with(model: @message, url: classroom_chat_create_path(@classroom), method: :post) do |form| %>
+  <%= form.text_field :content, placeholder: 'Type your message...' %>
+  <%= form.submit 'Send' %>
+<% end %>
+
+<div id="chat-messages">
+  <% @messages.each do |message| %>
+    <p><strong><%= message.sender.first_name %>:</strong> <%= message.content %></p>
+  <% end %>
+</div>

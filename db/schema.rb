@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_02_14_134829) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_20_072347) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -66,6 +66,16 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_14_134829) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["classroom_id"], name: "index_lessons_on_classroom_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.bigint "sender_id"
+    t.bigint "receiver_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["receiver_id"], name: "index_messages_on_receiver_id"
+    t.index ["sender_id"], name: "index_messages_on_sender_id"
   end
 
   create_table "participations", force: :cascade do |t|
@@ -124,6 +134,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_14_134829) do
   add_foreign_key "choices", "questions"
   add_foreign_key "classrooms", "users"
   add_foreign_key "lessons", "classrooms"
+  add_foreign_key "messages", "users", column: "receiver_id"
+  add_foreign_key "messages", "users", column: "sender_id"
   add_foreign_key "participations", "classrooms"
   add_foreign_key "participations", "users"
   add_foreign_key "questions", "lessons"

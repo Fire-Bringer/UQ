@@ -1,0 +1,11 @@
+<!-- app/views/chats/create.html.erb -->
+
+<h1>Chat Message Sent</h1>
+<p>Your message has been sent successfully!</p>
+
+<%= link_to 'Go back to chat', classroom_chat_path(@classroom) %>
+<% if flash[:notice] %>
+  <p class="success"><%= flash[:notice] %></p>
+<% elsif flash[:alert] %>
+  <p class="error"><%= flash[:alert] %></p>
+<% end %>

@@ -1,7 +1,7 @@
 class LessonsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_classroom, only: [:index]
-  before_action :set_lesson, only: [:show]
+  before_action :set_lesson, only: [:show, :index]
 
   def index
     @lessons = policy_scope(Lesson)
@@ -29,9 +29,9 @@ class LessonsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or contraints between actions
+  # Use callbacks to share common setup or constraints between actions
   def set_lesson
-    @lesson = Lesson.find(params[:id])
+    @lesson = Lesson.find(params[:id]) if params[:id].present?
   end
 
   # Strong params to help create new lessons
