@@ -22,7 +22,9 @@ class UsersController < ApplicationController
     additional_lesson_titles.each do |title|
       @lessons_with_scores << { lesson: OpenStruct.new(title: title), quiz_score: rand(0..5) }
     end
+
   end
+
 
   private
 

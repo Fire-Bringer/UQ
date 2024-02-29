@@ -60,6 +60,31 @@ last_names = %w[Watanabe Fujita Nakamura Ohtani Izumi Nakamura Mori Tanaka Suzuk
 
 puts 'Creating 10 boy students...'
 
+
+
+
+
+
+scores = {
+  'Ice Breakers' => rand(0..5),
+  'Oral Communication II' => rand(0..5),
+  'Social Science' => rand(0..5),
+  'Language Arts' => rand(0..5)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 boy_avatars.each do |path|
   student = User.create!(
     first_name: boy_first_names.sample,
