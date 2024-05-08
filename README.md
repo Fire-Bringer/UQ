@@ -1,4 +1,4 @@
-# 🎒 UQ - Your Intelligence
+# 🏫 UQ - Your Intelligence
 
 An education app which helps students learn through differentiated learning and AI assistance. Key features include a VARK evaluation, AI generated lesson content and an AI Q&A which helps students along with homework assignments.
 
