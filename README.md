@@ -1,8 +1,22 @@
 # 🏫 UQ - Your Intelligence
 
-An education app which helps students learn through differentiated learning and AI assistance. Key features include a VARK evaluation, AI generated lesson content and an AI Q&A which helps students along with homework assignments.
+An EduTech AI app built in a team of 3 people that aids students’ learning by applying the VARK learning style and helps teachers to grow the students in the best way possible. An exciting aspect of the application is allowing teachers to create lessons through AI in 4 different styles and students to utilize real-time AI chat for aid.
 
-Screenshots:
+### Interesting points on the project
+- AI creates 4 lesson types (Visual, Auditory, Reading, Kinesthetic) based on your prompt
+- Chat: The teacher can see all the student name's when messaging the general chat room but other student's are unable to see each other's names so that they are not shy in asking questions
+- AI can further create supplementary lessons for the students who are scoring 50% or less, they can toggle the feature in the original lesson
+
+### Login info
+1. ### Teacher</br>
+   email: abc@abc.com</br>
+   password: password</br>
+2. ### Student</br>
+   email: student@abc.com</br>
+   password: password1
+
+
+### Screenshots:
 
 Home Page Hero
 ![uq_home](https://github.com/Fire-Bringer/UQ/assets/135202658/29c11df9-7b06-4f6b-a0e5-55c559a40ee1)
